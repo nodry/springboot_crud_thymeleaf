@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootCrudApplication<crud-spring-boot-thymeleaf>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.crudapp.SpringBootCrudApplication",
+            "projectName": "crud-spring-boot-thymeleaf",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
