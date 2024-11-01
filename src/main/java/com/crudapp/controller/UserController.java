@@ -37,7 +37,7 @@ public class UserController {
 	
 	@GetMapping("/")
 	public String getUsersList(@RequestParam(defaultValue="1") Integer pageNo,
-							   @RequestParam(defaultValue="5") Integer pageSize,
+							   @RequestParam(defaultValue="10") Integer pageSize,
 		
 								Model model) {
 		model.addAttribute("users", userService.getUsersByPagination(pageNo, pageSize));

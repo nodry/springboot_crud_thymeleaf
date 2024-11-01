@@ -9,12 +9,15 @@ import java.security.SecureRandom;
 import java.util.List;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.crudapp.SpringBootCrudApplication;
 import com.crudapp.entity.User;
 import com.crudapp.repository.UserRepository;
 import com.crudapp.service.UserService;
@@ -23,6 +26,8 @@ import com.crudapp.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	private UserRepository userRepository;
+
+	private static Logger log = LoggerFactory.getLogger(SpringBootCrudApplication.class);
 	
 	private String UPLOAD_DIR = System.getProperty("user.dir") 
 								+ "/src/main/resources/static/uploads/";
@@ -80,13 +85,20 @@ public class UserServiceImpl implements UserService {
 		if(image != null && !image.isEmpty()) {
 						
 			String originalFilename = image.getOriginalFilename();
+			@SuppressWarnings("null")
 			String extension = originalFilename.substring(originalFilename.lastIndexOf('.'));
-			String uniqueName = UUID.randomUUID().toString() + extension;
+			String uuid = UUID.randomUUID().toString(); 
+			String uniqueName = uuid + extension;
+
+			log.info("extension :: " + extension);
+			log.info("uuid :: " + uuid);
+			log.info("uniqueName :: " + uniqueName);
 			
 			Path path = Paths.get(UPLOAD_DIR + uniqueName);
 			Files.write(path, image.getBytes());
-			
-			System.out.println("UPLOAD PATH : " + UPLOAD_DIR + uniqueName);
+
+			log.info("UPLOAD PATH : " + UPLOAD_DIR + uniqueName);
+
 			return uniqueName;
 		}		
 		return null;

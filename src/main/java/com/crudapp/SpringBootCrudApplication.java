@@ -10,18 +10,18 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 @SpringBootApplication(exclude={SecurityAutoConfiguration.class})
 public class SpringBootCrudApplication implements CommandLineRunner{
 	
-	private static Logger LOGGER = LoggerFactory.getLogger(SpringBootCrudApplication.class);
+	private static Logger log = LoggerFactory.getLogger(SpringBootCrudApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootCrudApplication.class, args);
-		
-		LOGGER.info("-- APPLICATION RUNNING --");
+
+		log.info("-- APPLICATION RUNNING START !!! --");
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
 
-		
+
 	}
 
 }
