@@ -1,4 +1,4 @@
-package com.crudapp.entity;
+package com.webapp.entity;
 
 import java.io.File;
 import java.sql.Date;

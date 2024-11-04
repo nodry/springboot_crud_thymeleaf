@@ -1,11 +1,11 @@
-package com.crudapp.service;
+package com.webapp.service;
 
 import java.io.IOException;
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.crudapp.entity.User;
+import com.webapp.entity.User;
 
 public interface UserService {
 	List<User> getAllUsers();

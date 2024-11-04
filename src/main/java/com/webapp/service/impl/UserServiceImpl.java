@@ -1,4 +1,4 @@
-package com.crudapp.service.impl;
+package com.webapp.service.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,10 +17,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.crudapp.SpringBootCrudApplication;
-import com.crudapp.entity.User;
-import com.crudapp.repository.UserRepository;
-import com.crudapp.service.UserService;
+import com.webapp.SpringBootCrudApplication;
+import com.webapp.entity.User;
+import com.webapp.repository.UserRepository;
+import com.webapp.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

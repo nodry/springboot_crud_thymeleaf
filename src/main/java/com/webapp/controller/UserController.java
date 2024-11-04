@@ -1,4 +1,4 @@
-package com.crudapp.controller;
+package com.webapp.controller;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.crudapp.entity.User;
-import com.crudapp.service.UserService;
+import com.webapp.entity.User;
+import com.webapp.service.UserService;
 
 @Controller("/")
 public class UserController {

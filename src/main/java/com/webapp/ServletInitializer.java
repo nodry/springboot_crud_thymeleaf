@@ -1,4 +1,4 @@
-package com.crudapp;
+package com.webapp;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
