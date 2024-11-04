@@ -17,6 +17,11 @@
 *.tar.gz
 *.rar
 
+# ETC File
+*.lock
+*.bin
+
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
@@ -31,6 +36,7 @@ replay_pid*
 
 # Local History for Visual Studio Code
 .history/
+.idea/
 
 # Built Visual Studio Code Extensions
 *.vsix
