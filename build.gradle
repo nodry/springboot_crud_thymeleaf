@@ -20,9 +20,12 @@ dependencies {
     api libs.org.springframework.boot.spring.boot.starter.thymeleaf
     api libs.org.springframework.boot.spring.boot.starter.web
     api libs.org.springframework.boot.spring.boot.starter.security
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.1'
+//    runtimeOnly libs.org.postgresql:postgresql
     runtimeOnly libs.org.springframework.boot.spring.boot.devtools
-    runtimeOnly libs.com.mysql.mysql.connector.j
+//    runtimeOnly libs.com.mysql.mysql.connector.j
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
+
 //    providedCompile libs.org.springframework.boot.spring.boot.starter.tomcat
 }
 

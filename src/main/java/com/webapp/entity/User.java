@@ -87,7 +87,11 @@ public class User {
 	}
 	
 	public String getFormattedDob() {
+		System.out.print(" test1 ::: ~~~~~~~~~~~~~~~");
 		SimpleDateFormat d = new SimpleDateFormat("dd MMM yyyy");
+		System.out.print(" test2 ::: ~~~~~~~~~~~~~~~" + d);
+		System.out.print(" test3 ::: ~~~~~~~~~~~~~~~" + dob);
+		System.out.print(" test4 ::: ~~~~~~~~~~~~~~~" + d.format(dob));
 		return d.format(dob);
 	}
 	public String getImageUrl() {
